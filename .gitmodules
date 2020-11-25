@@ -10,3 +10,9 @@
 [submodule "submodules/controllers"]
 	path = submodules/controllers
 	url = git@github.com:KSU-IEEE/controllers.git
+[submodule "submodules/noise-recognition"]
+	path = submodules/noise-recognition
+	url = git@github.com:KSU-IEEE/noise-recognition.git
+[submodule "wiki"]
+	path = wiki
+	url = git@github.com:KSU-IEEE/wiki.git
