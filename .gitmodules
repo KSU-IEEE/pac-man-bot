@@ -1,0 +1,12 @@
+[submodule "catkin_ws/src/statemachine"]
+	path = catkin_ws/src/statemachine
+	url = https://github.com/KSU-IEEE/statemachine
+[submodule "accessibility"]
+	path = accessibility
+	url = git@github.com:KSU-IEEE/accessibility.git
+[submodule "submodules/drivers"]
+	path = submodules/drivers
+	url = https://github.com/KSU-IEEE/drivers
+[submodule "submodules/controllers"]
+	path = submodules/controllers
+	url = git@github.com:KSU-IEEE/controllers.git
