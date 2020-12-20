@@ -16,3 +16,6 @@
 [submodule "wiki"]
 	path = wiki
 	url = git@github.com:KSU-IEEE/wiki.git
+[submodule "submodules/behaviors"]
+	path = submodules/behaviors
+	url = git@github.com:KSU-IEEE/behaviors.git
