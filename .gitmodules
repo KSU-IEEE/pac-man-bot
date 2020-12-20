@@ -16,6 +16,6 @@
 [submodule "wiki"]
 	path = wiki
 	url = git@github.com:KSU-IEEE/wiki.git
-[submodule "submodules/behaviors"]
-	path = submodules/behaviors
-	url = git@github.com:KSU-IEEE/behaviors.git
+[submodule "catkin_ws/src/behaviors"]
+	path = catkin_ws/src/behaviors
+	url = https://github.com/KSU-IEEE/behaviors
