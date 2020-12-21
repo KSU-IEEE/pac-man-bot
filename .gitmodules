@@ -1,9 +1,6 @@
 [submodule "catkin_ws/src/statemachine"]
 	path = catkin_ws/src/statemachine
 	url = https://github.com/KSU-IEEE/statemachine
-[submodule "accessibility"]
-	path = accessibility
-	url = git@github.com:KSU-IEEE/accessibility.git
 [submodule "submodules/drivers"]
 	path = submodules/drivers
 	url = https://github.com/KSU-IEEE/drivers
@@ -19,3 +16,6 @@
 [submodule "catkin_ws/src/behaviors"]
 	path = catkin_ws/src/behaviors
 	url = https://github.com/KSU-IEEE/behaviors
+[submodule "accessibility"]
+	path = accessibility
+	url = git@github.com:KSU-IEEE/accessibility.git
