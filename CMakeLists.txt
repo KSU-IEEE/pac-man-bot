@@ -6,7 +6,6 @@ project(pack-man-bot)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/accessibility/cmake)
 set(ACCESSIBILITY_DIR ${CMAKE_SOURCE_DIR}/accessibility)
 include(notice_message)
-include(run_bashscript)
 
 #[[
 ABOUT:
@@ -26,11 +25,13 @@ if(JUST_ARDUINO)
     notice_message("excluding other packages")
 else()
     notice_message("building non-arduino packages")
-    # add_subdirectory(submodules/controlers)
-    # add_subdirectory(submodules/noise-recognition)
+    # non-ros libraries
+    add_subdirectory(${PROJECT_SOURCE_DIR}/submodules/controllers)
+    add_subdirectory(submodules/noise-recognition)
 
-    add_subdirectory(catkin_ws/src/behaviors)
-    # add_subdirectory(catkin_ws/src/statemachine)
+    # ros packages
+    add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/behaviors)
+    add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/statemachine)
 
     # creating rossrc command if not already exeisting 
     notice_message("checking ros variables")
