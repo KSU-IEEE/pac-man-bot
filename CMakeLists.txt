@@ -5,6 +5,7 @@ project(pack-man-bot)
 # "includes"
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/accessibility/cmake)
 set(ACCESSIBILITY_DIR ${CMAKE_SOURCE_DIR}/accessibility)
+set(CMAKE_TOOLCHAIN_FILE ${ACCESSIBILITY_DIR}/Arduino-CMake-Toolchain/Arduino-toolchain.cmake)
 include(notice_message)
 
 #[[
@@ -44,5 +45,5 @@ if(JUST_ROS)
     notice_message("excluding arduino libraires")
 else()
     notice_message("adding arduino libraries")
-    # add_subdirectory(submodules/drivers ARDUINO_BINARY_DIR)
+    add_subdirectory(submodules/drivers)
 endif()
