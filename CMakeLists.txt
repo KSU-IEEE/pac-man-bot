@@ -33,6 +33,7 @@ else()
     # ros packages
     add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/behaviors)
     add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/statemachine)
+    add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/ros-wrappers)
 
     # creating rossrc command if not already exeisting 
     notice_message("checking ros variables")
