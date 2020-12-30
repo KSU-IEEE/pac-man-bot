@@ -19,3 +19,6 @@
 [submodule "accessibility"]
 	path = accessibility
 	url = git@github.com:KSU-IEEE/accessibility.git
+[submodule "catkin_ws/src/ros-wrappers"]
+	path = catkin_ws/src/ros-wrappers
+	url = git@github.com:KSU-IEEE/ros-wrappers.git
