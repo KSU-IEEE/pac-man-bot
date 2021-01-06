@@ -7,6 +7,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/accessibility/cmake)
 set(ACCESSIBILITY_DIR ${CMAKE_SOURCE_DIR}/accessibility)
 set(CMAKE_TOOLCHAIN_FILE ${ACCESSIBILITY_DIR}/Arduino-CMake-Toolchain/Arduino-toolchain.cmake)
 include(notice_message)
+include(setup_ros_alias)
 
 #[[
 ABOUT:
@@ -36,9 +37,9 @@ else()
     add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/ros-wrappers)
 
     # creating rossrc command if not already exeisting 
-    notice_message("checking ros variables")
-    set(ros_path "${CMAKE_SOURCE_DIR}/setup.sh")
-    execute_process(COMMAND ${ACCESSIBILITY_DIR}/bash/add_ros_cmds.sh ${CMAKE_BINARY_DIR}/devel/setup.sh)
+    notice_message("setting ros variables")
+    set(ros_path "${CMAKE_BINARY_DIR}/devel/setup.sh")
+    setup_ros_alias(${ros_path})
 endif()
 
 # arduino libraries
