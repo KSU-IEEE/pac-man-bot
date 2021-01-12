@@ -22,3 +22,6 @@
 [submodule "catkin_ws/src/ros-wrappers"]
 	path = catkin_ws/src/ros-wrappers
 	url = git@github.com:KSU-IEEE/ros-wrappers.git
+[submodule "catkin_ws/src/arduino-ros"]
+	path = catkin_ws/src/arduino-ros
+	url = git@github.com:KSU-IEEE/arduino-ros.git
