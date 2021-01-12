@@ -5,7 +5,7 @@ project(pack-man-bot)
 # "includes"
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/accessibility/cmake)
 set(ACCESSIBILITY_DIR ${CMAKE_SOURCE_DIR}/accessibility)
-set(CMAKE_TOOLCHAIN_FILE ${ACCESSIBILITY_DIR}/Arduino-CMake-Toolchain/Arduino-toolchain.cmake)
+# set(CMAKE_TOOLCHAIN_FILE ${ACCESSIBILITY_DIR}/Arduino-CMake-Toolchain/Arduino-toolchain.cmake)
 include(notice_message)
 include(setup_ros_alias)
 
@@ -20,7 +20,7 @@ If you owuld like to compile just the arduino libraries, set the option 'JUST_AR
 option(JUST_ROS "used to compile only the catkin packages" off)
 option(JUST_ARDUINO "used to only compile the arduino packages" off)
 
-set(ARDUINO_BINARY_DIR ${CMAKE_SOURCE_DIR}/Arduino/libraries)
+# set(ARDUINO_BINARY_DIR ${CMAKE_SOURCE_DIR}/Arduino/libraries)
 
 # catkin libraries and other libraries
 if(JUST_ARDUINO)
@@ -47,5 +47,6 @@ if(JUST_ROS)
     notice_message("excluding arduino libraires")
 else()
     notice_message("adding arduino libraries")
+    add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/arduino-ros)
     add_subdirectory(submodules/drivers)
 endif()
