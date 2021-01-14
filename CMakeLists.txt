@@ -5,7 +5,7 @@ project(pack-man-bot)
 # "includes"
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/accessibility/cmake)
 set(ACCESSIBILITY_DIR ${CMAKE_SOURCE_DIR}/accessibility)
-# set(CMAKE_TOOLCHAIN_FILE ${ACCESSIBILITY_DIR}/Arduino-CMake-Toolchain/Arduino-toolchain.cmake)
+set(CMAKE_TOOLCHAIN_FILE ${ACCESSIBILITY_DIR}/Arduino-CMake-Toolchain/Arduino-toolchain.cmake)
 include(notice_message)
 include(setup_ros_alias)
 
@@ -31,6 +31,9 @@ else()
     add_subdirectory(${PROJECT_SOURCE_DIR}/submodules/controllers)
     add_subdirectory(submodules/noise-recognition)
 
+    # rosserial libraries 
+    add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/arduino-ros)
+
     # ros packages
     add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/behaviors)
     add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/statemachine)
@@ -47,6 +50,5 @@ if(JUST_ROS)
     notice_message("excluding arduino libraires")
 else()
     notice_message("adding arduino libraries")
-    add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/arduino-ros)
     add_subdirectory(submodules/drivers)
 endif()
