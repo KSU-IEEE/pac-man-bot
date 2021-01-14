@@ -20,7 +20,7 @@ If you owuld like to compile just the arduino libraries, set the option 'JUST_AR
 option(JUST_ROS "used to compile only the catkin packages" off)
 option(JUST_ARDUINO "used to only compile the arduino packages" off)
 
-set(ARDUINO_BINARY_DIR ${CMAKE_SOURCE_DIR}/Arduino/libraries)
+# set(ARDUINO_BINARY_DIR ${CMAKE_SOURCE_DIR}/Arduino/libraries)
 
 # catkin libraries and other libraries
 if(JUST_ARDUINO)
@@ -30,6 +30,9 @@ else()
     # non-ros libraries
     add_subdirectory(${PROJECT_SOURCE_DIR}/submodules/controllers)
     add_subdirectory(submodules/noise-recognition)
+
+    # rosserial libraries 
+    add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/arduino-ros)
 
     # ros packages
     add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/behaviors)
