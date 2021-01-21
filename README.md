@@ -19,7 +19,7 @@ $ git config credential.helper store
 ```
 The first time you push, you will have to enter your username and password, but everytime after that you won't have too.
 
-**NOTE:** this puts your git information visibily in your home directory (`~/.git-credential`) becomes initialized after you first enter your credentials). So be sure that you don't put this on a computer you don't trust.
+**NOTE:** this puts your git information visibily in your home directory (`~/.git-credential` becomes initialized after you first enter your credentials). So be sure that you don't put this on a computer you don't trust.
 
 2. Clone repos:  
 ```BASH  
