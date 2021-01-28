@@ -3,7 +3,7 @@ An integration repo of everything needed for the 2021 SouthEastcon hardware comp
 This is meant to be able to be used to test, compile, and run the code, both on the robot for deployment, as well as on test computers.  
 
 ## Using this on a Windows Machine  
-This code is meant to be ran and compiled on a linux machine (Ubuntu 18.04 to be specific). Because of that, it is highly recommended to not set this up on a windows machine.  
+This code is meant to be ran and compiled on a linux machine (**Ubuntu 18.04** to be specific). Because of that, it is highly recommended to not set this up on a windows machine.  
 
 Rather, setup the Windows subsystem for Linux, by following [these instructions](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10). WSL acts as a light weight VM, and is able to to use applications you have already installed onto windows (such as using the correct test editor: VSCode). 
 
