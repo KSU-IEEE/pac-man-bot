@@ -27,7 +27,7 @@ option(INCLUDE_ARDUINO "used to only compile the arduino packages" off)
 # set(ARDUINO_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/accessibility/cmake/Arduino-CMake-Toolchain")
 # set(ROS_ARDUINO_TOOLCHAIN "${rosserial_arduino_PACKAGE_PATH}/cmake_scripts/toolchains/Arduino.cmake")
 # non-ros/non-arduino libraries
-add_subdirectory(${PROJECT_SOURCE_DIR}/submodules/controllers)
+# add_subdirectory(${PROJECT_SOURCE_DIR}/submodules/controllers)
 add_subdirectory(submodules/noise-recognition)
 
 # arduino libraries
