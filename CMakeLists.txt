@@ -36,15 +36,19 @@ if(NOT INCLUDE_ARDUINO)
 else()
     notice_message("adding arduino libraries")
     add_subdirectory(submodules/drivers)
-    
-    # rosserial libraries 
-    add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/arduino-ros)
 endif()
 
 # catkin libraries and other libraries
 if(EXCLUDE_ROS)
     notice_message("excluding ros packages")
 else()
+    # rosserial libraries 
+    if (INCLUDE_ARDUINO)
+        notice_message("including ros-serial projects")
+        add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/arduino-ros)
+    else()
+        notice_message("excluding ros-serial projects")
+    endif()
     notice_message("building ros packages")
     # ros packages
     add_subdirectory(${PROJECT_SOURCE_DIR}/catkin_ws/src/behaviors)
