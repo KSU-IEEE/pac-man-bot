@@ -5,6 +5,7 @@ project(pack-man-bot)
 # "includes"
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/accessibility/cmake ${rosserial_arduino_PACKAGE_PATH}/cmake_scripts/modules)
 set(ARDUINO_TOOLCHAIN_FILE ${ROSSERIAL_ARDUINO_TOOLCHAIN})
+set(controllers_path ${CMAKE_CURRENT_SOURCE_DIR}/submodules/controllers)
 
 include(notice_message)
 include(setup_ros_alias)
