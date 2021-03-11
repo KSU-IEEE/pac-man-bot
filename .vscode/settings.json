@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.scxml": "xml",
+        "ostream": "cpp"
+    }
+}
