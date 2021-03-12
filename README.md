@@ -58,3 +58,9 @@ $ roslaunch behaviors test_behaviors.launch
 ```  
 This can be ran from any directory, upon using the following command roscore will launch and there will be a series of outputs showing 2 nodes running.  
 **NOTE:** The last command starts roscore. This process will keeping going until you cancel it with `ctrl-C`.  
+
+## SSHing into pi  
+The current rasberry pi for this project can be ssh'd using the following command: 
+```BASH
+$ ssh bot-9384@10.78.142.178
+```
